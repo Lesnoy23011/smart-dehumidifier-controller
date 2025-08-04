@@ -24,7 +24,7 @@ This controller:
 
 ## ⚙️ Core Components
 
-- [LILYGO T-Relay ESP32 Board](https://www.lilygo.cc/products/t-relay-esp32)
+- [LILYGO T-Relay ESP32 Board](https://www.lilygo.cc/products/t-relay)
 - ESPHome firmware flashed to ESP32
 - Home Assistant (any installation method)
 - Zigbee or ESPHome-compatible humidity/CO₂/PM2.5 sensors
