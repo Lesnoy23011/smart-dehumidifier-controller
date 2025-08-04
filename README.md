@@ -1,6 +1,6 @@
 # Smart Dehumidifier Controller with Home Assistant & ESP32
 
-An open-source solution for whole-house dehumidifier control using ESP32, ESPHome, and Home Assistant. Designed for flexibility, this system replaces commercial wired controllers with distributed sensor logic and full Home Assistant integration—giving you fine-grained control over humidity, CO₂, particulate matter, and fresh air intake.
+An open-source, **Home Assistant–integrated** smart controller for whole-house dehumidifiers using an **ESP32 relay board** and **distributed sensor logic**. This project replaces inflexible commercial units with a **fully customizable**, automation-ready setup for controlling humidity, CO₂, PM2.5, and ventilation systems.
 
 ---
 
@@ -13,7 +13,6 @@ Most commercial whole-house dehumidifier controllers use a single humidity senso
 ## ✅ Project Goals and Advantages
 
 This controller:
-
 - Uses an **ESP32-based relay board** to switch the dehumidifier compressor/fan using standard 24V AC logic
 - Integrates seamlessly with **Home Assistant** via **ESPHome**
 - Aggregates **multiple humidity, CO₂, and air quality sensors** from around the home
@@ -32,15 +31,15 @@ This controller:
 
 ---
 
-🔌 Power Supply Notes
-This project uses a 24V AC to 12V DC buck converter, which is mounted inside the custom enclosure. The STL case is designed specifically to fit this model:
-
+🔌 **Power Supply Notes**  
+This project uses a 24V AC to 12V DC buck converter, which is mounted inside the custom enclosure. The STL case is designed specifically to fit this model:  
 [AC to DC Converter on Amazon (B0983GW7YJ)](https://www.amazon.com/dp/B0983GW7YJ)
 
-⚙️ Why this matters:
+⚙️ Why this matters:  
 In HVAC systems, 24V AC is a standard control voltage used to actuate relays for compressors, fans, dampers, and thermostats. This converter allows you to safely step down 24V AC (available in most HVAC wiring) to 12V DC to power the LILYGO ESP32 T-Relay module and its onboard relays — eliminating the need for an additional power brick.
 
 ---
+
 ## 🛠 How It Works
 
 1. The ESP32 acts as a relay controller, exposing two switches to Home Assistant.
@@ -52,24 +51,31 @@ In HVAC systems, 24V AC is a standard control voltage used to actuate relays for
    - Trigger fresh air intake systems when CO₂ or humidity thresholds are exceeded
 
 ---
+
 ### 📊 Wiring Diagram
 
 ![Wiring Diagram](docs/Wiring%20Diagram.png)
 
 This simplified wiring diagram shows how the 24V AC control voltage from a typical HVAC system is stepped down to 12V DC using a buck converter. The power feeds a LILYGO ESP32 relay board, which controls two outputs: one for the compressor and one for the fan. This allows smart dehumidifier control using Home Assistant and distributed sensor data.
 
+---
+
 ## 🏠 Real-World Use
 
 Tested across multiple residential installations in South Florida—where high heat and humidity are persistent. System has proven extremely reliable in maintaining indoor comfort, reducing mold risk, and optimizing energy efficiency.
 
+### ⏱ Runtime Tracking with Home Assistant
+
+This system uses Home Assistant’s `history_stats` integration to track daily runtime of the fan and dehumidifier. Data is reset daily and visualized via Lovelace dashboards, offering valuable insight into performance and energy use.
+
 ---
 
-## 📷 Upcoming Additions
+## ✅ Included Files
 
-- 📸 Wiring diagram & setup photos
-- 🧩 Sample ESPHome YAML configuration
-- 🖼️ Home Assistant dashboard screenshots
-- 🧱 STL files for custom enclosures (3D printed)
+- 🖼️ Wiring diagram (see above)
+- 📸 Real-world case and dashboard photos
+- 🧩 Sample ESPHome YAML config (coming soon)
+- 🧱 STL files for custom enclosures
 
 ---
 
@@ -81,10 +87,19 @@ Tested across multiple residential installations in South Florida—where high h
 
 ---
 
+## 🔍 Why This Project Matters
+
+- Eliminates the limitations of single-sensor commercial systems
+- Empowers smart automations using real-time indoor air quality data
+- Integrates HVAC components into a modern, open ecosystem
+- Demonstrates advanced skills in ESPHome, wiring, HA logic, and enclosure design
+
+---
+
 ## 📜 License
 
 MIT License (will be added in future update)
 
 ---
 
-*Built by Maksim Tsarenko. Contributions welcome once public hardware and software files are posted.*
+*Built and maintained by Maksim Tsarenko • [LinkedIn](https://www.linkedin.com/in/maksim-tsarenko/)*
