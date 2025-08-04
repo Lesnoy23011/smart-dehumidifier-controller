@@ -52,6 +52,11 @@ In HVAC systems, 24V AC is a standard control voltage used to actuate relays for
    - Trigger fresh air intake systems when CO₂ or humidity thresholds are exceeded
 
 ---
+### 📊 Wiring Diagram
+
+![Wiring Diagram](docs/Wiring%20Diagram.png)
+
+This simplified wiring diagram shows how the 24V AC control voltage from a typical HVAC system is stepped down to 12V DC using a buck converter. The power feeds a LILYGO ESP32 relay board, which controls two outputs: one for the compressor and one for the fan. This allows smart dehumidifier control using Home Assistant and distributed sensor data.
 
 ## 🏠 Real-World Use
 
