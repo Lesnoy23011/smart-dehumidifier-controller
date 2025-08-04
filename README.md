@@ -74,7 +74,7 @@ This system uses Home Assistant’s `history_stats` integration to track daily r
 
 - 🖼️ Wiring diagram (see above)
 - 📸 Real-world case and dashboard photos
-- 🧩 Sample ESPHome YAML config (coming soon)
+- 🧩 Sample ESPHome YAML config
 - 🧱 STL files for custom enclosures
 
 ---
