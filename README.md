@@ -35,7 +35,7 @@ This controller:
 🔌 Power Supply Notes
 This project uses a 24V AC to 12V DC buck converter, which is mounted inside the custom enclosure. The STL case is designed specifically to fit this model:
 
-- [AC to DC Converter] (https://www.amazon.com/dp/B0983GW7YJ)
+[AC to DC Converter on Amazon (B0983GW7YJ)](https://www.amazon.com/dp/B0983GW7YJ)
 
 ⚙️ Why this matters:
 In HVAC systems, 24V AC is a standard control voltage used to actuate relays for compressors, fans, dampers, and thermostats. This converter allows you to safely step down 24V AC (available in most HVAC wiring) to 12V DC to power the LILYGO ESP32 T-Relay module and its onboard relays — eliminating the need for an additional power brick.
